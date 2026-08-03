@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>网申表单填充助手</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="title-row">
+      <span class="logo">📝</span>
+      <h1>网申表单填充</h1>
+    </div>
+    <div class="profile-bar">
+      <select id="profileSelect" title="切换配置"></select>
+      <button id="newProfileBtn" class="btn-icon" title="新建配置">＋</button>
+      <button id="renameProfileBtn" class="btn-icon" title="重命名">✎</button>
+      <button id="delProfileBtn" class="btn-icon btn-danger" title="删除当前配置">✕</button>
+    </div>
+  </header>
+
+  <!-- 配置编辑视图 -->
+  <div id="view-edit" class="view">
+    <div id="fieldsContainer" class="fields-container"></div>
+    <div class="actions">
+      <button id="saveBtn" class="btn btn-secondary">💾 保存配置</button>
+      <button id="scanBtn" class="btn btn-primary">🔍 扫描并填充</button>
+    </div>
+    <div id="saveTip" class="tip"></div>
+  </div>
+
+  <!-- 预览确认视图 -->
+  <div id="view-preview" class="view hidden">
+    <div class="view-title">
+      <span>预览确认 — 请检查匹配结果</span>
+    </div>
+    <div id="matchedList" class="match-list"></div>
+    <div id="unmatchedSection" class="unmatched-section">
+      <div class="section-label">⚠️ 以下字段未能自动填充，需手动补全：</div>
+      <div id="unmatchedList"></div>
+    </div>
+    <div class="actions">
+      <button id="cancelFillBtn" class="btn btn-secondary">返回编辑</button>
+      <button id="confirmFillBtn" class="btn btn-primary">✓ 确认填充</button>
+    </div>
+  </div>
+
+  <!-- 填充结果视图 -->
+  <div id="view-result" class="view hidden">
+    <div class="result-icon" id="resultIcon">✅</div>
+    <div id="resultContent" class="result-content"></div>
+    <div class="actions">
+      <button id="resultDoneBtn" class="btn btn-primary">完成</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <button id="mappingBtn" class="btn-link">⚙ 字段映射设置</button>
+    <span class="version">v1.0</span>
+  </footer>
+
+  <script src="field-config.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
