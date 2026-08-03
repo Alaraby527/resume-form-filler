@@ -1,0 +1,9 @@
+/* content.css - 内容脚本样式，高亮已填充字段 */
+
+.form-filler-highlight {
+  outline: 2px solid #4caf50 !important;
+  outline-offset: 1px !important;
+  background-color: #e8f5e9 !important;
+  transition: background-color 0.3s ease, outline 0.3s ease !important;
+  box-shadow: 0 0 6px rgba(76, 175, 80, 0.5) !important;
+}
