@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>字段映射设置 - 网申表单填充助手</title>
+  <link rel="stylesheet" href="options.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="page-header">
+      <h1>📝 字段映射设置</h1>
+      <p class="subtitle">为字段添加自定义别名，让插件更精准地识别各种网申表单。当某个表单字段名与内置关键词不同时，在此添加对应别名即可。</p>
+    </header>
+
+    <div class="tip-box">
+      <strong>使用说明：</strong>找到对应字段，在"自定义别名"输入框中输入该字段在网申表单中的其他叫法（多个用逗号分隔），点击保存即可。例如"手机号"字段，可添加"移动电话、联络电话"等别名。
+    </div>
+
+    <div id="mappingsContainer"></div>
+
+    <div class="actions">
+      <button id="saveBtn" class="btn btn-primary">💾 保存设置</button>
+      <span id="saveTip" class="save-tip"></span>
+    </div>
+  </div>
+
+  <script src="field-config.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>
