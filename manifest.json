@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "网申表单快速填充助手",
+  "version": "1.0.0",
+  "description": "一键识别网申表单并自动填充预设信息，支持多套配置、自定义字段映射、预览确认，专为校招投递打造。",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "网申表单快速填充"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["field-config.js", "content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "options_page": "options.html"
+}
